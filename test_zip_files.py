@@ -1,6 +1,3 @@
-# from pypdf import PdfReader
-# from openpyxl.reader.excel import load_workbook
-# import xlrd
 import os.path
 from zipfile import ZipFile
 
@@ -8,16 +5,12 @@ from utils import PDF_RESOURCES_PATH, TXT_RESOURCES_PATH, XLS_RESOURCES_PATH, XL
 
 
 def test_archive_files(tmp_directory):
-    # pdf_file = PdfReader(stream=os.path.abspath(PDF_RESOURCES_PATH))
     pdf_size = os.path.getsize(PDF_RESOURCES_PATH)
     pdf_name = os.path.basename(PDF_RESOURCES_PATH)
-    # text_file = open(TXT_RESOURCES_PATH, 'r')
     text_size = os.path.getsize(TXT_RESOURCES_PATH)
     text_name = os.path.basename(TXT_RESOURCES_PATH)
-    # xls_file = xlrd.open_workbook(XLS_RESOURCES_PATH)
     xls_size = os.path.getsize(XLS_RESOURCES_PATH)
     xls_name = os.path.basename(XLS_RESOURCES_PATH)
-    # xlsx_file = load_workbook(XLSX_RESOURCES_PATH)
     xlsx_size = os.path.getsize(XLSX_RESOURCES_PATH)
     xlsx_name = os.path.basename(XLSX_RESOURCES_PATH)
 
